@@ -2,7 +2,7 @@
 <div>
 <Menue id="menu"/>
  <div class="container">
-        <form method="post">
+        <form>
           <label>Noms</label>
           <input 
             type="text" 
