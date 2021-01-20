@@ -104,6 +104,9 @@ export default {
     }
   },
   methods: {
+    envoyer(){
+      window.location.href = "https://divin-angapay.herokuapp.com/";
+    },
     sendEmail(e) {
       try {
         emailjs.sendForm('service_gzmdtee', 'template_jchjpzk', e.target,
