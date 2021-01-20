@@ -25,7 +25,7 @@
             placeholder="Message">
           </textarea>
           
-          <input type="submit" value="Envoyer">
+          <input type="submit" value="Envoyer" @click="envoyer">
         </form>
     </div>
 </div>
