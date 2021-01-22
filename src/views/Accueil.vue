@@ -5,7 +5,7 @@
      <Menue />
     </div>
    <div id="description">
-       <textra :data='words' :timer="10"  :infinite='true' filter="simple" />
+       <textra :data='words' :timer="6"  :infinite='true' filter="left-right" />
    </div>
    
 
@@ -21,8 +21,8 @@ export default {
     },
   data () {
     return {
-      words: ["<br><br><br>Je suis étudiant à L'université de <a href='https://www.univ-grenoble-alpes.fr/'>Grenoble-Alpes</a>  <br> <br><br>  En master  Mathématique et informatique appliqués <br> aux sciences humaines et sociales <a href='http://formations.univ-grenoble-alpes.fr/fr/catalogue/master-XB/sciences-humaines-et-sociales-SHS/master-mathematiques-et-informatique-appliquees-aux-sciences-humaines-et-sociales-miashs-program-master-mathematiques-informatique-appliquees-et-sciences-humaines-et-sociales.html'>(Miashs)</a>",
-      "<br><br><br> Actuellement développeur .net  stagiaire <br><br> à  la direction des systèmes d'information <br> de la  Ville de Chambéry et de l'agglomération du Grand Chambéry<br>","<br><br><br>Stage realisé dans le cadre du <a href='https://www.piton.univ-smb.fr/'>dispositif  piton </a>de l'université savoie-mont-blanc "]
+      words: ["<div id='un'><br><br><br>Je suis étudiant à L'université de <a href='https://www.univ-grenoble-alpes.fr/'>Grenoble-Alpes</a>  <br> <br><br>  En master  Mathématique et informatique appliqués <br> aux sciences humaines et sociales <a href='http://formations.univ-grenoble-alpes.fr/fr/catalogue/master-XB/sciences-humaines-et-sociales-SHS/master-mathematiques-et-informatique-appliquees-aux-sciences-humaines-et-sociales-miashs-program-master-mathematiques-informatique-appliquees-et-sciences-humaines-et-sociales.html'>(Miashs)</a></div>",
+      "<br><br><br>Dépuis Février 2021 Développeur Java stagiaire <br><br> depuis  février 2021 à  la direction des systèmes d'information <br> de la  Ville de Chambéry et de l'agglomération du Grand Chambéry<br>","<br><br><br>Je realise mon stage  dans le cadre du <a href='https://www.piton.univ-smb.fr/'>dispositif  piton </a>de l'université Savoiemont blanc"]
     }
   }
 
@@ -67,5 +67,8 @@ height: 3em;
     margin-top:-6em;
 
   
+}
+#un{
+  background-color: rgba(238, 249, 255, 0);;
 }
 </style>

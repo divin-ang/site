@@ -2,7 +2,7 @@
 <div>
 <Menue id="menu"/>
  <div class="container">
-        <form>
+        <form class="contact-form" @submit.prevent="sendEmail">
           <label>Noms</label>
           <input 
             type="text" 
@@ -25,7 +25,7 @@
             placeholder="Message">
           </textarea>
           
-          <input type="submit" value="Envoyer" @click="envoyer">
+          <input type="submit" value="Envoyer">
         </form>
     </div>
 </div>
@@ -105,16 +105,18 @@ export default {
   },
   methods: {
     envoyer(){
-      window.location.href = "https://divin-angapay.herokuapp.com/";
+      this.sendEmail();
+      this.$router.push({ name: 'Accueil' })
+      
     },
     sendEmail(e) {
       try {
-        emailjs.sendForm('service_gzmdtee', 'template_jchjpzk', e.target,
-        'user_TYivqMiAqi5wfwWo2zOAC', {
+        emailjs.sendForm('service_63jdf7g', 'template_cmtenal', e.target, 'user_TYivqMiAqi5wfwWo2zOAC', {
           name: this.name,
           email: this.email,
           message: this.message
         })
+        this.$router.push({ name: 'Accueil' })
 
       } catch(error) {
           console.log({error})
