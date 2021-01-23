@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-bind:style="{ backgroundImage: 'url(../assets/back.jpg)' }">
+  <div id="app">
   
     <router-view/>
   </div>
@@ -7,7 +7,7 @@
 
 <style>
  #app{
-   height:31em;
+  
     
  
 

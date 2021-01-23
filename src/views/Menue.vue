@@ -1,61 +1,57 @@
 <template>
-
-
- <nav  id="menu_item"> 
-
- <router-link  to="/moi"   id="menu_itemP">Divin Angapay</router-link>
-
- <router-link  to="/"  id="menu_itemA">Accueil</router-link>
- <router-link  to="/moi"   id="menu_itemP">A propos de moi</router-link>
- <router-link  to="/contact"   id="menu_itemC">Me contacter</router-link>
- 
-</nav>
-
-
     
+    <nav  id="nav" class="navbar navbar-expand-lg navbar-light bg-white position-fixed  nav-container " >
+  
+  <router-link  to=""  class="navbar-brand disabled">Divin Angapay</router-link>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <router-link to="/" class="nav-link"> Accueil <span class="sr-only">(current)</span></router-link> 
+        
+      </li>
+      <li class="nav-item">
+       
+        <router-link  class="nav-link" to="/moi"   >A propos de moi</router-link>
+      </li>
+      
+      <li class="nav-item">
+       
+        <router-link  to="/contact"  class="nav-link ">Me contacter</router-link>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" @mousedown="lowLight" @mouseout="highLight">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 </template>
 
-<style >
-#menu_itemA,#menu_itemP,#menu_itemC{
-    text-decoration: none;
-    
-    font-size: 20px;
-    margin-left: 7em;
-    color:rgba(255, 255, 255, 0.897);
-    border:none;
- 
-    
-    filter: brightness(80%);
-    border-radius: 3;
-    
-   
-}
-
-#menu_itemA:hover,#menu_itemP:hover,#menu_itemC:hover  {
-  background-color:orange;
-   filter: brightness(100%);
+<style>
+.nav-container{
+width: 100%;
+ z-index: 3;
 
 }
-
-
-
-#nom{
-    margin-left: 5em;
-    font-size: 20px;  
-    color:white;
-    
-}
-#menu_item{
-
-
-
- 
-
-   
-}
-#menu{
-   
-
-}
-
 </style>
+
+<script>
+export default {
+  methods:{
+    lowLight(){
+    
+    let nav = document.getElementById("nav");
+    let picture = document.getElementById("picture");
+    picture.style.filter ="brightness(30%)"
+    nav.style.filter ="brightness(100%)"
+    },highLight(){
+      document.getElementById("picture").style.filter
+      ="brightness(100%)"
+    }
+  }
+}
+</script>

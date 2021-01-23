@@ -6,7 +6,7 @@
     <Menue id="menue"/>
   
   </div>
-  <div id="descript">
+  <div id="descript" :style="{'background-image': 'url(' + require('../assets/laptop1.jpg') + ')'}">
 <section>
   <h2 class="title">Formation</h2>
   <h3>Année : 2019-2021 </h3>
@@ -22,7 +22,7 @@
 </section>
 <section>
 <h2>Expériences professionnelles</h2>
- <p>Actuellement développeur c# stagiaire  à la direction des systèmes d'informations de l'agglomeration de grand Chambéry et à la ville de Chambéry.<br>
+ <p>Actuellement développeur stagiaire  à la direction des systèmes d'informations de l'agglomeration de grand Chambéry et à la ville de Chambéry.<br>
  </p>
  <p>Stage réalisé dans le cadre du dispositif piton de  l'Université Savoie Mont Blanc </p>
 
@@ -70,7 +70,7 @@ export default {
 }
 </script>
 <style>
-#menue{
+#menuee{
   height: 3em;
   
   
@@ -85,7 +85,9 @@ export default {
 }
 #descript{
 
-  margin-top:6em;
+   width: 100%;
+  
+   height: 70em;
 }
 section{
   float: left;
@@ -94,6 +96,7 @@ section{
   height: 400px;
   width: 500px;
   margin-bottom: 2em;
+  margin-top: 7em;
   
   
 }
@@ -101,7 +104,8 @@ section{
    height: 465px;
 }
 p,ul{
-  font-size: 20px;
+  font-size: 17px;
+  font: bold;
 }
 h2{
   color:brown;

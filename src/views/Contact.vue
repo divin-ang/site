@@ -1,134 +1,49 @@
 <template>
-<div>
-<Menue id="menu"/>
- <div class="container">
-        <form class="contact-form" @submit.prevent="sendEmail">
-          <label>Noms</label>
-          <input 
-            type="text" 
-            v-model="name"
-            name="name"
-            placeholder="Vos noms"
-          >
-          <label>Email</label>
-          <input 
-            type="email" 
-            v-model="email"
-            name="email"
-            placeholder="Your Email"
-            >
-          <label>Message</label>
-          <textarea 
-            name="message"
-            v-model="message"
-            cols="30" rows="5"
-            placeholder="Message">
-          </textarea>
-          
-          <input type="submit" value="Envoyer">
-        </form>
-    </div>
-</div>
+    
+  <div >
+  <div class="menu-contact">
+  <Menue />
+  </div>
    
+   <div id="contact" :style="{'background-image': 'url(' + require('../assets/laptop1.jpg') + ')'}">
+      <p class="email">Email  :   angapaydivin@gmail.com</p>
+       
+   
+   </div>
+  
+  </div>
+
 </template>
 
-<style scoped>
-* {box-sizing: border-box;}
-
-.container {
-  display: block;
-  margin-top:4em;
-  margin-left:7em;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
-}
-
-label {
-  float: left;
-}
-
-input[type=text], [type=email], textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-#menu{
-    height: 3em;
-  
-  
-    z-index: 3;
-    background-color:brown;
-    width: 86em;
-    margin-left:-1em;
-    position: fixed;
-    margin-top: -4em;
-
-  
-}
-
-</style>
 
 <script>
-import emailjs from 'emailjs-com';
-import Menue from '../views/Menue'
-
+import Menue from './Menue'
 export default {
-  components: { Menue },
-  name: 'ContactUs',
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: ''
-    }
-  },
-  methods: {
-    envoyer(){
-      this.sendEmail();
-      this.$router.push({ name: 'Accueil' })
-      
-    },
-    sendEmail(e) {
-      try {
-        emailjs.sendForm('service_63jdf7g', 'template_cmtenal', e.target, 'user_TYivqMiAqi5wfwWo2zOAC', {
-          name: this.name,
-          email: this.email,
-          message: this.message
-        })
-        this.$router.push({ name: 'Accueil' })
-
-      } catch(error) {
-          console.log({error})
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
-    },
+    
     components:{
         Menue,
     }
-  }
 }
 </script>
+
+<style >
+
+#contact{
+ margin-top: 4em;
+ 
+   position: absolute;
+   text-align: center;
+  
+   width: 100%;
+   height: 85%;
+}
+.menu-contact{
+   
+     position: absolute;
+
+}
+.email{
+margin-top: 8em;
+font-size: 25px;
+}
+</style>
