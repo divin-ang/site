@@ -7,7 +7,12 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import { VBTogglePlugin } from 'bootstrap-vue'
+import { VBToggle } from 'bootstrap-vue'
+
 Vue.use(BootstrapVue)
+Vue.directive('b-toggle',VBToggle)
+Vue.use(VBTogglePlugin)
 
 Vue.use(IconsPlugin)
 

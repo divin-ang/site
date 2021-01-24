@@ -21,7 +21,7 @@
    
 </section>
 <section>
-<h2>Expériences professionnelles</h2>
+<h2>Expérience professionnelle</h2>
  <p>Actuellement développeur stagiaire  à la direction des systèmes d'informations de l'agglomeration de grand Chambéry et à la ville de Chambéry.<br>
  </p>
  <p>Stage réalisé dans le cadre du dispositif piton de  l'Université Savoie Mont Blanc </p>

@@ -29,17 +29,17 @@ export default {
 <style >
 
 #contact{
- margin-top: 4em;
+
  
    position: absolute;
    text-align: center;
+   width:100%;
+   height:100%;
   
-   width: 100%;
-   height: 85%;
+  
 }
 .menu-contact{
    
-     position: absolute;
 
 }
 .email{
