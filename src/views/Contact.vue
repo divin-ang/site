@@ -33,7 +33,7 @@
             placeholder="Votre email"
             ria-describedby="emailHelp"
             id="input-email"
-            
+             required
             >
         
           </div>
