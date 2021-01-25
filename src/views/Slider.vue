@@ -23,7 +23,7 @@ export default {
       images: [
         {image:require("../assets/laptop1.jpg"),text:"Je suis étudiant à L'université de <a href='https://www.univ-grenoble-alpes.fr/'>Grenoble-Alpes</a>  <b<br>  en master  Mathématique  <br>et informatique  appliqués  aux sciences humaines et sociales <a href='http://formations.univ-grenoble-alpes.fr/fr/catalogue/master-XB/sciences-humaines-et-sociales-SHS/master-mathematiques-et-informatique-appliquees-aux-sciences-humaines-et-sociales-miashs-program-master-mathematiques-informatique-appliquees-et-sciences-humaines-et-sociales.html'>(Miashs)</a>"
         },
-        {image:require("../assets/laptop2.jpg"),text:"Dépuis Février 2021 j'éffectue un stage en tant que  Développeur Java  à  la direction des systèmes d'information <br>  de l'agglomération du Grand Chambéry<br>"},
+        {image:require("../assets/laptop2.jpg"),text:"Dépuis Février 2021 j'effectue un stage en tant que  Développeur Java  à  la direction des systèmes d'information <br>  de l'agglomération du Grand Chambéry<br>"},
 
         {image:require("../assets/laptop2.jpg"),text:"Je realise mon stage  dans le cadre du <a href='https://www.piton.univ-smb.fr/'>dispositif  piton </a>de l'université Savoie Mont blanc"}
        
@@ -41,7 +41,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 10000);
+      this.timer = setInterval(this.next, 12000);
     },
 
     next: function() {
